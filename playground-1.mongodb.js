@@ -31,4 +31,5 @@ db.getCollection('sales').aggregate([
   // Group the total sales for each product.
   { $group: { _id: '$item', totalSaleAmount: { $sum: { $multiply: [ '$price', '$quantity' ] } } } }
 ]);
-
+ // Playground Result 2
+db.getCollection('sales').find().pretty();
